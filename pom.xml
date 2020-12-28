@@ -433,7 +433,7 @@
     <repository>
         <id>central</id>
         <name>artifactory-sonar-releases</name>
-        <url>http://35.232.142.33:8081/artifactory/libs-release</url>
+        <url>http://35.193.131.83:8081/artifactory/libs-release</url>
     </repository>
 </distributionManagement>
 </project>
