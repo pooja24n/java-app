@@ -6,7 +6,7 @@
   - name: Pull .war artifact from Artifactory
    # become: true
     get_url:
-      url: http://35.202.2.213:8082/artifactory/libs-release/org/springframework/samples/spring-petclinic/2.0-SNAPSHOT/spring-petclinic-2.0-20201202.170936-1.war
+      url: http://35.202.2.213:8082/artifactory/libs-release/org/springframework/samples/spring-petclinic/2.0-SNAPSHOT/spring-petclinic-2.0-20201229.032657-2.war
       dest: target
       url_username: admin
       url_password: Cindazzler@24
@@ -23,7 +23,7 @@
 
   - name: Build image and with build args
     docker_image:
-      name: spring-petclinic-2.0-20201202.170936-1
+      name: spring-petclinic-2.0-20201229.032657-2
       build:
         path: /var/lib/jenkins/workspace/pipeline_j
         pull: no
@@ -32,7 +32,7 @@
  
   - name: Push to docker hub
     docker_image:
-      name: spring-petclinic-2.0-20201202.170936-1
+      name: spring-petclinic-2.0-20201229.032657-2
       repository: pooja24n/petclinic1:1.0
       push: yes
       source: local
