@@ -21,7 +21,7 @@ spec:
    spec:
      containers:
      - name: petclinic
-       image: pooja24n/petclinic
+       image: pooja24n/petclinic1:1.0
        ports:
         - containerPort: 8080
        env:
